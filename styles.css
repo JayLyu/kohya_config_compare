@@ -1,0 +1,129 @@
+html,body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: auto;
+  font-family: system-ui, -apple-system, "Pingfang SC", "Microsoft Yahei", BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* navigation */
+
+.navigation {
+  box-sizing: border-box;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 0 24px;
+  background-color: white;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+}
+
+.title {
+  font-size: 14px;
+  color: #666;
+  padding: 0;
+}
+
+.title span {
+  /* font-family: 'Courier New', Courier, monospace; */
+  font-size: 22px;
+  font-weight: 700;
+  color: #333;
+  margin-right: 8px;
+}
+
+.upload {
+  display: flex;
+  width: fit-content;
+}
+
+input[type="file"] {
+  display: none;
+}
+.custom-file-upload {
+  display: inline-flex;
+  flex-grow: 0;
+  flex-shrink: 0;
+  font-size: 14px;
+  text-align: center;
+  color: #666;
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: fit-content;
+  margin-left: 12px;
+}
+
+/* content */
+
+.content {
+  background-color: #f7f8fa;
+  box-sizing: border-box;
+  width: 100%;
+  height: calc(100% - 64px);
+  padding: 24px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+#result:empty::after {
+  position: relative;
+  display: block;
+  content: "no file";
+  font-size: 12px;
+  line-height: 100px;
+  color: #999;
+  text-align: center;
+  width: 100%;
+}
+
+.highlight {
+  background-color: #ffffa3;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  font-size: 12px;
+  padding: 8px;
+  border-top: 1px;
+  border-bottom: 1px;
+  border-left: 0;
+  border-right: 0;
+  border-style: solid;
+  border-color: transparent;
+  margin-bottom: 2px;
+}
+
+th {
+  /* font-family: 'Courier New', Courier, monospace; */
+  background: #f7f8fa;
+  text-align: right;
+  border-color: transparent;
+}
+
+td {
+  background-color: white;
+}
+
+tr {
+  color: #333;
+  transition: all 0.15s ease-out;
+}
+
+tr:hover {
+  color: #000;
+  transition: all 0.15s ease-in;
+  background-color: rgba(0,0,0,0.04);
+}
